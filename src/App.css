@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
 }
-a:hover{
+a:hover {
   text-decoration: none;
 }
 a {
@@ -117,6 +117,46 @@ body {
   margin: 0;
 }
 
+.hack-btn {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 19px 38px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  border-radius: 7px;
+  border: 2px solid #000;
+  background: #f3a200;
+  color: #000;
+  font-family: Archivo;
+  font-size: 24px;
+  font-style: normal;
+  overflow: hidden;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  transition: all 500ms ease-out;
+}
+.hack-btn::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.4);
+  width: 15%;
+  height: 100%;
+  top: 0%;
+  left: -35%;
+  transform: skew(45deg);
+  position: absolute;
+  transition: left 1000ms ease-out;
+}
+
+.hack-btn:hover {
+  background: linear-gradient(91deg, #53e544 6%, #e3d34b 122.89%);
+  transform: scale(1.1);
+}
+.hack-btn:hover::before {
+  left: 115%;
+}
 .whatsapp-const {
   display: none;
 }
@@ -139,6 +179,7 @@ body {
   .hideBtnMob {
     display: none !important;
   }
+
   .whatsapp-const {
     position: fixed;
     display: flex;
